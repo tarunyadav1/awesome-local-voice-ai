@@ -1,0 +1,58 @@
+name: Add a model or project
+description: Propose a local voice model, runtime, or app with first-party sources.
+title: "Add: "
+labels: [catalog]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Project type
+      options:
+        - Voice model
+        - Local runtime
+        - Local app
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Original repository or model card
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Voice tasks and local targets
+      description: State what it does and where it can run. Link the source for each claim.
+    validations:
+      required: true
+  - type: input
+    id: code-license
+    attributes:
+      label: Code license source
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: weights-license
+    attributes:
+      label: Model-weight license source
+      placeholder: https://
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Contributor checks
+      options:
+        - label: I used first-party sources rather than a search snippet or another directory.
+          required: true
+        - label: I disclosed any material relationship I have with this project.
+          required: true

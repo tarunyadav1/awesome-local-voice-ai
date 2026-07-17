@@ -1,0 +1,40 @@
+name: Correct an entry
+description: Report stale, inaccurate, or incomplete catalog data.
+title: "Correction: "
+labels: [correction]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Catalog field
+      placeholder: weights_license, apple_support, languages
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Current and proposed value
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: First-party evidence
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Does this affect licensing, privacy, or safety?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true

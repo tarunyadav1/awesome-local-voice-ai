@@ -1,0 +1,1158 @@
+{
+  "meta": {
+    "updated": "2026-07-17",
+    "verification_levels": {
+      "source-reviewed": "Capabilities and license notes were checked against linked first-party sources.",
+      "runtime-reproduced": "Maintainers reproduced a local run and recorded the environment.",
+      "benchmark-reproduced": "Maintainers ran the published benchmark protocol and retained the output."
+    }
+  },
+  "models": [
+    {
+      "id": "qwen3-tts",
+      "name": "Qwen3-TTS",
+      "organization": "Qwen",
+      "summary": "A 0.6B and 1.7B model family for preset voices, three-second cloning, voice design, instruction control, and ten languages.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "voice-design"
+      ],
+      "repo": "https://github.com/QwenLM/Qwen3-TTS",
+      "model_card": "https://huggingface.co/collections/Qwen/qwen3-tts",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/QwenLM/Qwen3-TTS/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/collections/Qwen/qwen3-tts"
+      },
+      "license_note": "The released code and model cards use Apache-2.0. Check the exact checkpoint card before redistribution.",
+      "commercial_use": "permissive",
+      "languages": "10 major languages",
+      "parameters": "0.6B / 1.7B",
+      "streaming": "yes",
+      "voice_cloning": "yes",
+      "voice_design": "yes",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "verified-runtime",
+      "apple_evidence": "https://github.com/Blaizzy/mlx-audio",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/QwenLM/Qwen3-TTS",
+          "https://github.com/Blaizzy/mlx-audio"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "omnivoice",
+      "name": "OmniVoice",
+      "organization": "k2-fsa",
+      "summary": "A compact multilingual TTS system focused on zero-shot cloning, voice design, and broad language coverage.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "voice-design"
+      ],
+      "repo": "https://github.com/k2-fsa/OmniVoice",
+      "model_card": "https://huggingface.co/k2-fsa/OmniVoice-0.6B",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/k2-fsa/OmniVoice/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/k2-fsa/OmniVoice-0.6B"
+      },
+      "license_note": "Apache-2.0 is stated for the released project. Voice inputs still require the speaker's permission.",
+      "commercial_use": "permissive",
+      "languages": "600+ reported",
+      "parameters": "0.6B",
+      "streaming": "no",
+      "voice_cloning": "yes",
+      "voice_design": "yes",
+      "platforms": [
+        "CUDA",
+        "MPS"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/k2-fsa/OmniVoice",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/k2-fsa/OmniVoice"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "chatterbox",
+      "name": "Chatterbox",
+      "organization": "Resemble AI",
+      "summary": "A family of expressive TTS models with zero-shot cloning, multilingual speech, and paralinguistic reaction tags.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "dialogue"
+      ],
+      "repo": "https://github.com/resemble-ai/chatterbox",
+      "model_card": "https://huggingface.co/ResembleAI/chatterbox",
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE"
+      },
+      "weights_license": {
+        "name": "MIT",
+        "url": "https://huggingface.co/ResembleAI/chatterbox"
+      },
+      "license_note": "The project and published checkpoints use MIT terms. Cloned voices require consent and lawful source audio.",
+      "commercial_use": "permissive",
+      "languages": "23 in multilingual model",
+      "parameters": "350M / 500M",
+      "streaming": "yes",
+      "voice_cloning": "yes",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA",
+        "MPS",
+        "MLX"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/resemble-ai/chatterbox",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/resemble-ai/chatterbox",
+          "https://github.com/Blaizzy/mlx-audio"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "kokoro-82m",
+      "name": "Kokoro-82M",
+      "organization": "hexgrad",
+      "summary": "A small fixed-voice model with fast local inference, a broad runtime community, and no native voice cloning.",
+      "tasks": [
+        "tts"
+      ],
+      "repo": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "model_card": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/hexgrad/Kokoro-82M"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/hexgrad/Kokoro-82M"
+      },
+      "license_note": "The model card lists Apache-2.0. Voice packs are fixed voices, not zero-shot clones.",
+      "commercial_use": "permissive",
+      "languages": "8 language codes in v1.0",
+      "parameters": "82M",
+      "streaming": "yes",
+      "voice_cloning": "no",
+      "voice_design": "no",
+      "platforms": [
+        "CPU",
+        "MLX",
+        "Core ML",
+        "ONNX"
+      ],
+      "apple_support": "verified-runtime",
+      "apple_evidence": "https://github.com/FluidInference/FluidAudio",
+      "status": "mature",
+      "hardware_class": "edge",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://huggingface.co/hexgrad/Kokoro-82M",
+          "https://github.com/FluidInference/FluidAudio"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "kitten-tts",
+      "name": "KittenTTS",
+      "organization": "KittenML",
+      "summary": "An ultra-small CPU and ONNX TTS family designed for low-memory and edge deployments.",
+      "tasks": [
+        "tts"
+      ],
+      "repo": "https://github.com/KittenML/KittenTTS",
+      "model_card": "https://huggingface.co/KittenML",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/KittenML/KittenTTS/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/KittenML"
+      },
+      "license_note": "Apache-2.0 is stated for the project. Check individual voice and checkpoint cards before packaging them.",
+      "commercial_use": "permissive",
+      "languages": "English-focused releases",
+      "parameters": "15M to 80M",
+      "streaming": "yes",
+      "voice_cloning": "no",
+      "voice_design": "no",
+      "platforms": [
+        "CPU",
+        "ONNX"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/KittenML/KittenTTS",
+      "status": "active",
+      "hardware_class": "edge",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/KittenML/KittenTTS"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "pocket-tts",
+      "name": "Pocket TTS",
+      "organization": "Kyutai",
+      "summary": "A lightweight CPU-first TTS package with preset voices and zero-shot voice cloning from short reference audio.",
+      "tasks": [
+        "tts",
+        "voice-cloning"
+      ],
+      "repo": "https://github.com/kyutai-labs/pocket-tts",
+      "model_card": "https://huggingface.co/kyutai/pocket-tts",
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/kyutai-labs/pocket-tts/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "CC-BY-4.0",
+        "url": "https://huggingface.co/kyutai/pocket-tts"
+      },
+      "license_note": "The code uses MIT terms; the model card should be checked for attribution requirements on weights.",
+      "commercial_use": "permissive",
+      "languages": "English",
+      "parameters": "100M class",
+      "streaming": "yes",
+      "voice_cloning": "yes",
+      "voice_design": "no",
+      "platforms": [
+        "CPU"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/kyutai-labs/pocket-tts",
+      "status": "active",
+      "hardware_class": "cpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/kyutai-labs/pocket-tts",
+          "https://huggingface.co/kyutai/pocket-tts"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "piper",
+      "name": "Piper",
+      "organization": "Open Home Foundation",
+      "summary": "A fast local neural TTS engine with a large voice collection and practical CPU deployment.",
+      "tasks": [
+        "tts"
+      ],
+      "repo": "https://github.com/OHF-Voice/piper1-gpl",
+      "model_card": null,
+      "code_license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/COPYING"
+      },
+      "weights_license": {
+        "name": "Varies by voice",
+        "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/VOICES.md"
+      },
+      "license_note": "The active engine is GPL-3.0. Every Piper voice has separate provenance and terms that must be checked.",
+      "commercial_use": "conditional",
+      "languages": "Voice-dependent",
+      "parameters": "Voice-dependent",
+      "streaming": "yes",
+      "voice_cloning": "no",
+      "voice_design": "no",
+      "platforms": [
+        "CPU",
+        "ONNX"
+      ],
+      "apple_support": "verified-runtime",
+      "apple_evidence": "https://github.com/k2-fsa/sherpa-onnx",
+      "status": "active",
+      "hardware_class": "edge",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/OHF-Voice/piper1-gpl",
+          "https://github.com/k2-fsa/sherpa-onnx"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "f5-tts",
+      "name": "F5-TTS",
+      "organization": "SWivid",
+      "summary": "A flow-matching TTS system used for zero-shot voice cloning and research on natural speech generation.",
+      "tasks": [
+        "tts",
+        "voice-cloning"
+      ],
+      "repo": "https://github.com/SWivid/F5-TTS",
+      "model_card": "https://huggingface.co/SWivid/F5-TTS",
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/SWivid/F5-TTS/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "CC-BY-NC-4.0",
+        "url": "https://huggingface.co/SWivid/F5-TTS"
+      },
+      "license_note": "The inference code is MIT. Official Emilia-trained checkpoints are non-commercial, including after fine-tuning.",
+      "commercial_use": "restricted",
+      "languages": "English and Chinese releases",
+      "parameters": "335M",
+      "streaming": "partial",
+      "voice_cloning": "yes",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://github.com/lucasnewman/f5-tts-mlx",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/SWivid/F5-TTS",
+          "https://huggingface.co/SWivid/F5-TTS"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "spark-tts",
+      "name": "Spark-TTS",
+      "organization": "SparkAudio",
+      "summary": "A controllable English and Chinese model with zero-shot cloning plus pitch, gender, and speaking-rate controls.",
+      "tasks": [
+        "tts",
+        "voice-cloning"
+      ],
+      "repo": "https://github.com/SparkAudio/Spark-TTS",
+      "model_card": "https://huggingface.co/SparkAudio/Spark-TTS-0.5B",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/SparkAudio/Spark-TTS/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/SparkAudio/Spark-TTS-0.5B"
+      },
+      "license_note": "Apache-2.0 is stated for the released code and checkpoint. Reference voices require permission.",
+      "commercial_use": "permissive",
+      "languages": "English and Chinese",
+      "parameters": "0.5B",
+      "streaming": "no",
+      "voice_cloning": "yes",
+      "voice_design": "limited",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "verified-runtime",
+      "apple_evidence": "https://github.com/Blaizzy/mlx-audio",
+      "status": "mature",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/SparkAudio/Spark-TTS",
+          "https://github.com/Blaizzy/mlx-audio"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "fish-speech",
+      "name": "Fish Speech",
+      "organization": "Fish Audio",
+      "summary": "An expressive multilingual speech model family with cloning and fine-grained delivery controls.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "dialogue"
+      ],
+      "repo": "https://github.com/fishaudio/fish-speech",
+      "model_card": "https://huggingface.co/fishaudio",
+      "code_license": {
+        "name": "Fish Audio Research License",
+        "url": "https://github.com/fishaudio/fish-speech/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Model-specific research terms",
+        "url": "https://huggingface.co/fishaudio"
+      },
+      "license_note": "Current releases use Fish Audio research terms. Commercial deployment requires separate review or permission.",
+      "commercial_use": "restricted",
+      "languages": "Multilingual; version-dependent",
+      "parameters": "0.5B to 5B",
+      "streaming": "yes",
+      "voice_cloning": "yes",
+      "voice_design": "limited",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "verified-runtime",
+      "apple_evidence": "https://github.com/Blaizzy/mlx-audio",
+      "status": "active",
+      "hardware_class": "high-memory",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/fishaudio/fish-speech",
+          "https://huggingface.co/fishaudio"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "dia",
+      "name": "Dia",
+      "organization": "Nari Labs",
+      "summary": "A dialogue-first English TTS model with two-speaker scripts, nonverbal tags, audio prompting, and voice cloning.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "dialogue"
+      ],
+      "repo": "https://github.com/nari-labs/dia",
+      "model_card": "https://huggingface.co/nari-labs/Dia-1.6B-0626",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/nari-labs/dia/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/nari-labs/Dia-1.6B-0626"
+      },
+      "license_note": "Apache-2.0 is stated for the project. The upstream README prohibits impersonation and deceptive use.",
+      "commercial_use": "permissive",
+      "languages": "English",
+      "parameters": "1.6B",
+      "streaming": "no",
+      "voice_cloning": "yes",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://github.com/Blaizzy/mlx-audio",
+      "status": "mature",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/nari-labs/dia"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "csm",
+      "name": "CSM",
+      "organization": "Sesame AI Labs",
+      "summary": "A conversational speech-generation model conditioned on text and prior audio context for natural multi-turn delivery.",
+      "tasks": [
+        "tts",
+        "dialogue"
+      ],
+      "repo": "https://github.com/SesameAILabs/csm",
+      "model_card": "https://huggingface.co/sesame/csm-1b",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/SesameAILabs/csm/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0 plus Llama dependency",
+        "url": "https://huggingface.co/sesame/csm-1b"
+      },
+      "license_note": "CSM is Apache-2.0, but its gated Llama 3.2 backbone carries Meta's separate community license.",
+      "commercial_use": "conditional",
+      "languages": "English-focused",
+      "parameters": "1B",
+      "streaming": "partial",
+      "voice_cloning": "limited",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA",
+        "MPS",
+        "MLX"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/SesameAILabs/csm",
+      "status": "maintenance",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/SesameAILabs/csm",
+          "https://huggingface.co/sesame/csm-1b"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "cosyvoice",
+      "name": "CosyVoice",
+      "organization": "FunAudioLLM",
+      "summary": "A multilingual TTS stack with zero-shot and cross-lingual cloning, instruction control, training, and deployment tooling.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "voice-design"
+      ],
+      "repo": "https://github.com/FunAudioLLM/CosyVoice",
+      "model_card": "https://huggingface.co/FunAudioLLM",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/FunAudioLLM/CosyVoice/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/FunAudioLLM"
+      },
+      "license_note": "The repository is Apache-2.0. Confirm the exact checkpoint card and included third-party components.",
+      "commercial_use": "permissive",
+      "languages": "Multilingual; version-dependent",
+      "parameters": "0.5B class",
+      "streaming": "yes",
+      "voice_cloning": "yes",
+      "voice_design": "yes",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://github.com/Blaizzy/mlx-audio",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/FunAudioLLM/CosyVoice"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "orpheus-tts",
+      "name": "Orpheus TTS",
+      "organization": "Canopy Labs",
+      "summary": "A Llama-based expressive TTS family with streaming generation, voice cloning, and emotion tags.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "dialogue"
+      ],
+      "repo": "https://github.com/canopyai/Orpheus-TTS",
+      "model_card": "https://huggingface.co/collections/canopylabs/orpheus-tts",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/canopyai/Orpheus-TTS/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/collections/canopylabs/orpheus-tts"
+      },
+      "license_note": "Apache-2.0 is stated for released code and models. Confirm the selected checkpoint and base-model terms.",
+      "commercial_use": "permissive",
+      "languages": "English plus research previews",
+      "parameters": "3B",
+      "streaming": "yes",
+      "voice_cloning": "yes",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA"
+      ],
+      "apple_support": "unverified",
+      "apple_evidence": null,
+      "status": "mature",
+      "hardware_class": "high-memory",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/canopyai/Orpheus-TTS"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "parler-tts",
+      "name": "Parler-TTS",
+      "organization": "Hugging Face",
+      "summary": "A text-described voice model with public training data, training code, and permissively released checkpoints.",
+      "tasks": [
+        "tts",
+        "voice-design"
+      ],
+      "repo": "https://github.com/huggingface/parler-tts",
+      "model_card": "https://huggingface.co/parler-tts",
+      "code_license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/huggingface/parler-tts/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Apache-2.0",
+        "url": "https://huggingface.co/parler-tts"
+      },
+      "license_note": "The project publishes code, datasets, and official checkpoints under permissive terms. Check derivative checkpoints separately.",
+      "commercial_use": "permissive",
+      "languages": "Checkpoint-dependent",
+      "parameters": "880M",
+      "streaming": "yes",
+      "voice_cloning": "no",
+      "voice_design": "yes",
+      "platforms": [
+        "CUDA",
+        "MPS"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://github.com/huggingface/parler-tts",
+      "status": "maintenance",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/huggingface/parler-tts"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "vibevoice",
+      "name": "VibeVoice",
+      "organization": "Microsoft",
+      "summary": "A long-form multi-speaker voice model family for podcasts, dialogue, expressive speech, and speech recognition.",
+      "tasks": [
+        "tts",
+        "dialogue"
+      ],
+      "repo": "https://github.com/microsoft/VibeVoice",
+      "model_card": "https://huggingface.co/microsoft/VibeVoice",
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/microsoft/VibeVoice/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Model-specific",
+        "url": "https://huggingface.co/microsoft/VibeVoice"
+      },
+      "license_note": "The code is MIT. Verify the specific VibeVoice checkpoint card before commercial use or redistribution.",
+      "commercial_use": "varies",
+      "languages": "English and Chinese releases",
+      "parameters": "0.5B to 7B",
+      "streaming": "partial",
+      "voice_cloning": "limited",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA"
+      ],
+      "apple_support": "unverified",
+      "apple_evidence": null,
+      "status": "active",
+      "hardware_class": "high-memory",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/microsoft/VibeVoice",
+          "https://huggingface.co/microsoft/VibeVoice"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "openvoice",
+      "name": "OpenVoice",
+      "organization": "MyShell",
+      "summary": "An established system for instant cross-lingual voice cloning and tone-color transfer from short references.",
+      "tasks": [
+        "tts",
+        "voice-cloning",
+        "voice-conversion"
+      ],
+      "repo": "https://github.com/myshell-ai/OpenVoice",
+      "model_card": "https://huggingface.co/myshell-ai",
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/myshell-ai/OpenVoice/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "MIT",
+        "url": "https://github.com/myshell-ai/OpenVoice"
+      },
+      "license_note": "The repository is MIT. Base speakers and any third-party checkpoints may carry separate terms.",
+      "commercial_use": "conditional",
+      "languages": "Cross-lingual; base-model dependent",
+      "parameters": "Varies",
+      "streaming": "no",
+      "voice_cloning": "yes",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA",
+        "CPU"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://github.com/myshell-ai/OpenVoice",
+      "status": "maintenance",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/myshell-ai/OpenVoice"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "melotts",
+      "name": "MeloTTS",
+      "organization": "MyShell",
+      "summary": "A multilingual fixed-speaker TTS library that can run in real time on CPU.",
+      "tasks": [
+        "tts"
+      ],
+      "repo": "https://github.com/myshell-ai/MeloTTS",
+      "model_card": "https://huggingface.co/myshell-ai/MeloTTS-English",
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/myshell-ai/MeloTTS/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "MIT",
+        "url": "https://huggingface.co/myshell-ai/MeloTTS-English"
+      },
+      "license_note": "MIT is stated for the project. Check individual language checkpoints and voice provenance.",
+      "commercial_use": "conditional",
+      "languages": "English, Spanish, French, Chinese, Japanese, Korean",
+      "parameters": "Varies",
+      "streaming": "yes",
+      "voice_cloning": "no",
+      "voice_design": "no",
+      "platforms": [
+        "CPU",
+        "CUDA"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/myshell-ai/MeloTTS",
+      "status": "maintenance",
+      "hardware_class": "cpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/myshell-ai/MeloTTS"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "seed-vc",
+      "name": "Seed-VC",
+      "organization": "Plachtaa",
+      "summary": "A zero-shot speech and singing voice-conversion system with offline and real-time modes.",
+      "tasks": [
+        "voice-conversion"
+      ],
+      "repo": "https://github.com/Plachtaa/seed-vc",
+      "model_card": "https://huggingface.co/Plachta/Seed-VC",
+      "code_license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/Plachtaa/seed-vc/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "Model-specific",
+        "url": "https://huggingface.co/Plachta/Seed-VC"
+      },
+      "license_note": "The code is GPL-3.0. Check the released checkpoint and every input voice for separate restrictions.",
+      "commercial_use": "conditional",
+      "languages": "Cross-lingual conversion",
+      "parameters": "Version-dependent",
+      "streaming": "yes",
+      "voice_cloning": "not-applicable",
+      "voice_design": "not-applicable",
+      "platforms": [
+        "CUDA",
+        "MPS"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/Plachtaa/seed-vc",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/Plachtaa/seed-vc"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "rvc",
+      "name": "RVC WebUI",
+      "organization": "RVC Project",
+      "summary": "A widely used retrieval-based voice-conversion training and inference interface with a large community model ecosystem.",
+      "tasks": [
+        "voice-conversion"
+      ],
+      "repo": "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI",
+      "model_card": null,
+      "code_license": {
+        "name": "MIT",
+        "url": "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/master/LICENSE"
+      },
+      "weights_license": {
+        "name": "Varies by trained model",
+        "url": "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI"
+      },
+      "license_note": "The code is MIT. Community voice models and their datasets have independent consent and copyright status.",
+      "commercial_use": "varies",
+      "languages": "Language-agnostic conversion",
+      "parameters": "Model-dependent",
+      "streaming": "partial",
+      "voice_cloning": "not-applicable",
+      "voice_design": "not-applicable",
+      "platforms": [
+        "CUDA",
+        "MPS",
+        "CPU"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI",
+      "status": "maintenance",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "vcclient",
+      "name": "VCClient",
+      "organization": "w-okada",
+      "summary": "A real-time voice-conversion desktop client with Apple Silicon builds and support for multiple conversion engines.",
+      "tasks": [
+        "voice-conversion"
+      ],
+      "repo": "https://github.com/w-okada/voice-changer",
+      "model_card": null,
+      "code_license": {
+        "name": "Custom terms",
+        "url": "https://github.com/w-okada/voice-changer/blob/master/LICENSE"
+      },
+      "weights_license": {
+        "name": "Varies by engine and model",
+        "url": "https://github.com/w-okada/voice-changer"
+      },
+      "license_note": "GitHub detects custom license files. Review the app, engine, and model terms as three separate layers.",
+      "commercial_use": "varies",
+      "languages": "Language-agnostic conversion",
+      "parameters": "Engine-dependent",
+      "streaming": "yes",
+      "voice_cloning": "not-applicable",
+      "voice_design": "not-applicable",
+      "platforms": [
+        "CUDA",
+        "CPU",
+        "MPS"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/w-okada/voice-changer/releases",
+      "status": "active",
+      "hardware_class": "varies",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/w-okada/voice-changer"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "moshi",
+      "name": "Moshi",
+      "organization": "Kyutai",
+      "summary": "A full-duplex speech-text model and streaming dialogue framework with an official MLX implementation.",
+      "tasks": [
+        "speech-to-speech",
+        "dialogue"
+      ],
+      "repo": "https://github.com/kyutai-labs/moshi",
+      "model_card": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "code_license": {
+        "name": "MIT / Apache-2.0",
+        "url": "https://github.com/kyutai-labs/moshi"
+      },
+      "weights_license": {
+        "name": "CC-BY-4.0",
+        "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16"
+      },
+      "license_note": "Python and web code use MIT; the Rust backend uses Apache-2.0; released weights require attribution.",
+      "commercial_use": "permissive",
+      "languages": "Model-dependent",
+      "parameters": "7B class",
+      "streaming": "yes",
+      "voice_cloning": "limited",
+      "voice_design": "no",
+      "platforms": [
+        "CUDA",
+        "MLX"
+      ],
+      "apple_support": "upstream",
+      "apple_evidence": "https://github.com/kyutai-labs/moshi/tree/main/moshi_mlx",
+      "status": "active",
+      "hardware_class": "high-memory",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/kyutai-labs/moshi"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "lfm-audio",
+      "name": "LFM2.5-Audio",
+      "organization": "Liquid AI",
+      "summary": "A 1.5B end-to-end speech model for text, audio input, TTS, ASR, and low-latency speech-to-speech interaction.",
+      "tasks": [
+        "tts",
+        "speech-to-speech",
+        "dialogue"
+      ],
+      "repo": "https://github.com/Liquid4All/liquid-audio",
+      "model_card": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+      "code_license": {
+        "name": "LFM Open License v1.0",
+        "url": "https://github.com/Liquid4All/liquid-audio/blob/main/LICENSE"
+      },
+      "weights_license": {
+        "name": "LFM Open License v1.0",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B"
+      },
+      "license_note": "This is a custom source-available license with eligibility conditions. Read it before commercial deployment.",
+      "commercial_use": "conditional",
+      "languages": "Multilingual; version-dependent",
+      "parameters": "1.5B",
+      "streaming": "yes",
+      "voice_cloning": "no",
+      "voice_design": "no",
+      "platforms": [
+        "CPU",
+        "CUDA",
+        "ROCm"
+      ],
+      "apple_support": "community-port",
+      "apple_evidence": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+      "status": "active",
+      "hardware_class": "consumer-gpu",
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/Liquid4All/liquid-audio",
+          "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B"
+        ]
+      },
+      "featured": true
+    }
+  ],
+  "runtimes": [
+    {
+      "id": "mlx-audio",
+      "name": "MLX-Audio",
+      "summary": "An Apple Silicon library and server for running many TTS, speech-to-text, and speech-to-speech models through MLX.",
+      "repo": "https://github.com/Blaizzy/mlx-audio",
+      "platforms": [
+        "macOS",
+        "iOS",
+        "MLX"
+      ],
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/Blaizzy/mlx-audio/blob/main/LICENSE"
+      },
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/Blaizzy/mlx-audio"
+        ]
+      }
+    },
+    {
+      "id": "fluid-audio",
+      "name": "FluidAudio",
+      "summary": "A Swift and Core ML audio package for on-device TTS, transcription, VAD, and diarization on Apple hardware.",
+      "repo": "https://github.com/FluidInference/FluidAudio",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "Core ML",
+        "Swift"
+      ],
+      "license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/FluidInference/FluidAudio/blob/main/LICENSE"
+      },
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/FluidInference/FluidAudio"
+        ]
+      }
+    },
+    {
+      "id": "sherpa-onnx",
+      "name": "sherpa-onnx",
+      "summary": "A cross-platform ONNX speech runtime with mobile examples and support for several offline TTS model families.",
+      "repo": "https://github.com/k2-fsa/sherpa-onnx",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "Android",
+        "Windows",
+        "Linux",
+        "ONNX"
+      ],
+      "license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/k2-fsa/sherpa-onnx/blob/master/LICENSE"
+      },
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/k2-fsa/sherpa-onnx"
+        ]
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "murmur",
+      "name": "Murmur",
+      "summary": "A paid local voice studio for Apple Silicon with cloning, voice design, multi-speaker projects, and export.",
+      "url": "https://www.murmurtts.com/?utm_source=github&utm_medium=referral&utm_campaign=awesome_local_voice_ai&utm_content=apps_table",
+      "source": null,
+      "platforms": [
+        "macOS",
+        "Apple Silicon"
+      ],
+      "price": "$49 one-time",
+      "license": "Proprietary",
+      "maintainer_affiliation": true,
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://www.murmurtts.com/"
+        ]
+      }
+    },
+    {
+      "id": "omnivoice-studio",
+      "name": "OmniVoice Studio",
+      "summary": "A local desktop interface for OmniVoice cloning, voice design, dubbing, and dictation.",
+      "url": "https://github.com/debpalash/OmniVoice-Studio",
+      "source": "https://github.com/debpalash/OmniVoice-Studio",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "price": "Free",
+      "license": "See repository",
+      "maintainer_affiliation": false,
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/debpalash/OmniVoice-Studio"
+        ]
+      }
+    },
+    {
+      "id": "voicebox",
+      "name": "Voicebox",
+      "summary": "An open-source local voice studio for cloning, speech generation, dictation, and agent integrations.",
+      "url": "https://voicebox.sh/",
+      "source": "https://github.com/jamiepine/voicebox",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "price": "Free",
+      "license": "Open source; see repository",
+      "maintainer_affiliation": false,
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-07-17",
+        "sources": [
+          "https://github.com/jamiepine/voicebox",
+          "https://voicebox.sh/"
+        ]
+      }
+    }
+  ]
+}

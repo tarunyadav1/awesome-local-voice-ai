@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tarunyadav1/awesome-local-voice-ai/blob/main/data/catalog.schema.json",
+  "title": "Awesome Local Voice AI catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "models", "runtimes", "apps"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["updated", "verification_levels"],
+      "properties": {
+        "updated": { "type": "string", "format": "date" },
+        "verification_levels": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "models": {
+      "type": "array",
+      "minItems": 20,
+      "items": { "$ref": "#/$defs/model" }
+    },
+    "runtimes": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "$ref": "#/$defs/resource" }
+    },
+    "apps": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "$ref": "#/$defs/app" }
+    }
+  },
+  "$defs": {
+    "url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 2 },
+        "url": { "$ref": "#/$defs/url" }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "checked", "sources"],
+      "properties": {
+        "level": {
+          "enum": ["source-reviewed", "runtime-reproduced", "benchmark-reproduced"]
+        },
+        "checked": { "type": "string", "format": "date" },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/url" }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "name", "organization", "summary", "tasks", "repo", "model_card",
+        "code_license", "weights_license", "license_note", "commercial_use",
+        "languages", "parameters", "streaming", "voice_cloning", "voice_design",
+        "platforms", "apple_support", "apple_evidence", "status", "hardware_class",
+        "verification", "featured"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 2 },
+        "organization": { "type": "string", "minLength": 2 },
+        "summary": { "type": "string", "minLength": 20, "maxLength": 220 },
+        "tasks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": ["tts", "voice-cloning", "voice-design", "dialogue", "voice-conversion", "speech-to-speech"]
+          },
+          "uniqueItems": true
+        },
+        "repo": { "$ref": "#/$defs/url" },
+        "model_card": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "code_license": { "$ref": "#/$defs/license" },
+        "weights_license": { "$ref": "#/$defs/license" },
+        "license_note": { "type": "string", "minLength": 8, "maxLength": 260 },
+        "commercial_use": { "enum": ["permissive", "conditional", "restricted", "varies"] },
+        "languages": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "parameters": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "streaming": { "enum": ["yes", "no", "partial", "unknown"] },
+        "voice_cloning": { "enum": ["yes", "no", "limited", "not-applicable"] },
+        "voice_design": { "enum": ["yes", "no", "limited", "not-applicable"] },
+        "platforms": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "enum": ["CPU", "CUDA", "ROCm", "MPS", "MLX", "Core ML", "ONNX", "WebGPU"] },
+          "uniqueItems": true
+        },
+        "apple_support": { "enum": ["upstream", "verified-runtime", "community-port", "unverified", "not-supported"] },
+        "apple_evidence": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "status": { "enum": ["active", "mature", "maintenance", "legacy"] },
+        "hardware_class": { "enum": ["edge", "cpu", "consumer-gpu", "high-memory", "varies"] },
+        "verification": { "$ref": "#/$defs/verification" },
+        "featured": { "type": "boolean" }
+      }
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "summary", "repo", "platforms", "license", "verification"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "summary": { "type": "string", "minLength": 20 },
+        "repo": { "$ref": "#/$defs/url" },
+        "platforms": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "license": { "$ref": "#/$defs/license" },
+        "verification": { "$ref": "#/$defs/verification" }
+      }
+    },
+    "app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "summary", "url", "source", "platforms", "price", "license", "maintainer_affiliation", "verification"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "summary": { "type": "string", "minLength": 20 },
+        "url": { "$ref": "#/$defs/url" },
+        "source": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "platforms": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "price": { "type": "string" },
+        "license": { "type": "string" },
+        "maintainer_affiliation": { "type": "boolean" },
+        "verification": { "$ref": "#/$defs/verification" }
+      }
+    }
+  }
+}

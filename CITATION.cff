@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: If this catalog helps your research, cite the repository and the original projects you used.
+title: Awesome Local Voice AI
+type: dataset
+authors:
+  - family-names: Yadav
+    given-names: Tarun
+repository-code: https://github.com/tarunyadav1/awesome-local-voice-ai
+url: https://tarunyadav1.github.io/awesome-local-voice-ai/
+license: CC0-1.0
+version: 0.1.0
+date-released: 2026-07-17

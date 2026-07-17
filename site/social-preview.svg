@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Local Voice AI</title><desc id="desc">A source-backed field guide to local TTS, voice cloning, and voice conversion.</desc>
+  <defs><pattern id="g" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#83f28f" stroke-opacity=".06"/></pattern></defs>
+  <rect width="1200" height="630" fill="#090d0b"/><rect width="1200" height="630" fill="url(#g)"/>
+  <text x="72" y="100" fill="#83f28f" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" letter-spacing="4">OPEN FIELD GUIDE / SOURCE REVIEWED</text>
+  <text x="72" y="250" fill="#f2f7f3" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="82" font-weight="700" letter-spacing="-4">Awesome Local</text>
+  <text x="72" y="340" fill="#83f28f" font-family="Georgia, serif" font-style="italic" font-size="92">Voice AI</text>
+  <text x="75" y="420" fill="#9da9a1" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="25">TTS · voice cloning · voice design · conversion</text>
+  <path d="M75 520h75l15-15 15 31 16-71 15 106 16-76 15 47 16-22h76l16-39 15 74 16-130 15 169 16-108 15 45 16-21h78l15-25 16 50 15-99 16 150 15-92 16 24h95" fill="none" stroke="#83f28f" stroke-width="3"/>
+</svg>

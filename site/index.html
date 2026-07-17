@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Local Voice AI</title>
+  <meta name="description" content="Compare open and local TTS, voice cloning, voice design, and voice conversion projects by task, hardware, license, and Apple support.">
+  <meta name="theme-color" content="#0a0e0c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awesome Local Voice AI">
+  <meta property="og:description" content="A source-backed field guide to local voice models, runtimes, and apps.">
+  <meta property="og:image" content="social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="signal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Awesome Local Voice AI",
+      "description": "Source-backed catalog of local text-to-speech, voice cloning, voice design, and voice conversion projects.",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "creator": { "@type": "Person", "name": "Tarun Yadav" }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog">Skip to catalog</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Awesome Local Voice AI home">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Local Voice AI</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#catalog">Catalog</a>
+      <a href="#runtimes">Runtimes</a>
+      <a href="#apps">Apps</a>
+      <a class="github-link" href="https://github.com/tarunyadav1/awesome-local-voice-ai">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="live-dot"></span> Open field guide / source reviewed</p>
+        <h1 id="hero-title" aria-label="Find the voice model that fits your machine.">Find the voice model<br>that fits <em>your machine.</em></h1>
+        <p class="lede">Compare local TTS, voice cloning, voice design, and conversion projects by hardware, license, language, and Apple support.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalog">Search the catalog</a>
+          <a class="button button-quiet" href="https://github.com/tarunyadav1/awesome-local-voice-ai/issues/new?template=model.yml">Add a project <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="signal-stage reveal" aria-label="Animated audio signal illustration">
+        <svg viewBox="0 0 720 300" role="img" aria-labelledby="wave-title">
+          <title id="wave-title">A changing voice waveform</title>
+          <g class="wave-grid">
+            <path d="M0 50H720M0 100H720M0 150H720M0 200H720M0 250H720"/>
+            <path d="M90 0V300M180 0V300M270 0V300M360 0V300M450 0V300M540 0V300M630 0V300"/>
+          </g>
+          <path class="wave-shadow" d="M0 150h52l12-11 12 22 13-45 12 68 13-49 12 31 13-16h38l13-8 12 17 13-42 12 67 13-35 12 11h40l13-27 12 50 13-88 12 114 13-73 12 31 13-14h44l12-11 13 22 12-44 13 67 12-39 13 10h42l12-19 13 38 12-66 13 89 12-52 13 10h44"/>
+          <path class="wave-line" pathLength="1" d="M0 150h52l12-11 12 22 13-45 12 68 13-49 12 31 13-16h38l13-8 12 17 13-42 12 67 13-35 12 11h40l13-27 12 50 13-88 12 114 13-73 12 31 13-14h44l12-11 13 22 12-44 13 67 12-39 13 10h42l12-19 13 38 12-66 13 89 12-52 13 10h44"/>
+          <circle class="signal-head" cx="372" cy="150" r="5"/>
+        </svg>
+        <div class="signal-meta"><span>01:42.18</span><span>24 kHz</span><span>local</span></div>
+      </div>
+      <div class="hero-stats reveal" aria-label="Catalog statistics">
+        <div><strong id="stat-models">23</strong><span>models</span></div>
+        <div><strong id="stat-tasks">6</strong><span>voice tasks</span></div>
+        <div><strong id="stat-apple">0</strong><span>Apple paths</span></div>
+        <div><strong>CC0</strong><span>catalog data</span></div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-intro reveal">
+        <p class="section-index">01 / model index</p>
+        <div>
+          <h2 id="catalog-title">The catalog</h2>
+          <p>Every claim points back to its source. No star-count ranking, no blended license field.</p>
+        </div>
+      </div>
+
+      <div class="filter-shell reveal">
+        <label class="search-field">
+          <span class="sr-only">Search models</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="search" type="search" placeholder="Search model, org, language..." autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <div class="select-row">
+          <label>Task<select id="task-filter"><option value="all">All tasks</option></select></label>
+          <label>Hardware<select id="hardware-filter"><option value="all">Any hardware</option></select></label>
+          <label>Commercial<select id="commercial-filter"><option value="all">Any terms</option></select></label>
+          <label>Apple<select id="apple-filter"><option value="all">Any support</option></select></label>
+        </div>
+      </div>
+
+      <div class="results-bar">
+        <p><span id="result-count">23</span> projects</p>
+        <button id="clear-filters" class="text-button" type="button">Clear filters</button>
+      </div>
+
+      <div class="model-list" id="model-list" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <p>No project matches those filters.</p>
+        <button class="button button-quiet" type="button" data-clear>Reset the catalog</button>
+      </div>
+    </section>
+
+    <section class="method-strip reveal" aria-label="Verification method">
+      <p class="section-index">Trust the label</p>
+      <div class="method-flow">
+        <div><span>01</span><strong>Source reviewed</strong><p>Project, model card, and license checked.</p></div>
+        <i aria-hidden="true"></i>
+        <div><span>02</span><strong>Runtime reproduced</strong><p>Local run and environment recorded.</p></div>
+        <i aria-hidden="true"></i>
+        <div><span>03</span><strong>Benchmark reproduced</strong><p>Protocol, audio, and measurements retained.</p></div>
+      </div>
+      <a href="https://github.com/tarunyadav1/awesome-local-voice-ai/blob/main/docs/METHODOLOGY.md">Read the method <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="resource-section" id="runtimes" aria-labelledby="runtimes-title">
+      <div class="section-intro reveal">
+        <p class="section-index">02 / run it here</p>
+        <div><h2 id="runtimes-title">Local runtimes</h2><p>The layer that turns published weights into working software.</p></div>
+      </div>
+      <div class="resource-list" id="runtime-list"></div>
+    </section>
+
+    <section class="resource-section apps-section" id="apps" aria-labelledby="apps-title">
+      <div class="section-intro reveal">
+        <p class="section-index">03 / use it</p>
+        <div><h2 id="apps-title">Local apps</h2><p>End-user tools with a checkable local-processing claim. Paid and affiliated entries are marked.</p></div>
+      </div>
+      <div class="resource-list" id="app-list"></div>
+    </section>
+
+    <section class="contribute reveal">
+      <p class="eyebrow">Built in public</p>
+      <h2 aria-label="Found a missing model or a wrong license?">Found a missing model<br>or a wrong license?</h2>
+      <p>Corrections are first-class contributions. Bring a first-party source and help keep the index useful.</p>
+      <a class="button button-primary" href="https://github.com/tarunyadav1/awesome-local-voice-ai/issues/new/choose">Open an issue <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-mark"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><strong>Awesome Local Voice AI</strong></div>
+    <p>Catalog data and original site code released under CC0-1.0.</p>
+    <div><a href="https://github.com/tarunyadav1/awesome-local-voice-ai">GitHub</a><a href="https://github.com/tarunyadav1/awesome-local-voice-ai/blob/main/docs/LICENSES.md">Licenses</a><a href="https://github.com/tarunyadav1/awesome-local-voice-ai/blob/main/CONTRIBUTING.md">Contribute</a></div>
+  </footer>
+
+  <dialog id="model-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close model details">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

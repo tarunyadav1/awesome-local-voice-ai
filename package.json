@@ -1,0 +1,20 @@
+{
+  "name": "awesome-local-voice-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Source-backed catalog of local TTS, voice cloning, voice design, and voice conversion projects.",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "generate:check": "node scripts/generate.mjs --check",
+    "validate": "node scripts/validate.mjs",
+    "check:copy": "node scripts/check-copy.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check": "npm run validate && npm run generate:check && npm run check:copy",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "CC0-1.0"
+}
