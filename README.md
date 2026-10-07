@@ -85,6 +85,7 @@ Last source review: **2026-07-17**. Every row links to its project and license e
 | **[FluidAudio](https://github.com/FluidInference/FluidAudio)** | A Swift and Core ML audio package for on-device TTS, transcription, VAD, and diarization on Apple hardware. | iOS, macOS, Core ML, Swift | [Apache-2.0](https://github.com/FluidInference/FluidAudio/blob/main/LICENSE) |
 | **[MLX-Audio](https://github.com/Blaizzy/mlx-audio)** | An Apple Silicon library and server for running many TTS, speech-to-text, and speech-to-speech models through MLX. | macOS, iOS, MLX | [MIT](https://github.com/Blaizzy/mlx-audio/blob/main/LICENSE) |
 | **[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)** | A cross-platform ONNX speech runtime with mobile examples and support for several offline TTS model families. | iOS, macOS, Android, Windows, Linux, ONNX | [Apache-2.0](https://github.com/k2-fsa/sherpa-onnx/blob/master/LICENSE) |
+| **[Tsubaki TTS Engine](https://github.com/MrHryhorii/SmartStack/tree/main/ONNX_Runner)** | A local C#/.NET TTS server using Piper and OpenVoice V2, with voice cloning, real-time streaming, and an OpenAI-compatible API. | Windows, Linux, CPU, DirectML, CUDA, WebGPU, ONNX | [GPL-3.0-or-later](https://github.com/MrHryhorii/SmartStack/blob/main/ONNX_Runner/LICENSE) |
 
 ## Local apps
 

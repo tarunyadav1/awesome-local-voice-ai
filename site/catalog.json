@@ -1085,6 +1085,33 @@
           "https://github.com/k2-fsa/sherpa-onnx"
         ]
       }
+    },
+    {
+      "id": "tsubaki-tts",
+      "name": "Tsubaki TTS Engine",
+      "summary": "A local C#/.NET TTS server using Piper and OpenVoice V2, with voice cloning, real-time streaming, and an OpenAI-compatible API.",
+      "repo": "https://github.com/MrHryhorii/SmartStack/tree/main/ONNX_Runner",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "CPU",
+        "DirectML",
+        "CUDA",
+        "WebGPU",
+        "ONNX"
+      ],
+      "license": {
+        "name": "GPL-3.0-or-later",
+        "url": "https://github.com/MrHryhorii/SmartStack/blob/main/ONNX_Runner/LICENSE"
+      },
+      "verification": {
+        "level": "source-reviewed",
+        "checked": "2026-10-07",
+        "sources": [
+          "https://github.com/MrHryhorii/SmartStack/tree/main/ONNX_Runner",
+          "https://github.com/MrHryhorii/SmartStack/blob/main/ONNX_Runner/LICENSE"
+        ]
+      }
     }
   ],
   "apps": [
